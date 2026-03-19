@@ -1,0 +1,66 @@
+{
+  "name": "copilot-studio-git-sync",
+  "version": "1.0.0",
+  "description": "CLI tool to sync Microsoft Copilot Studio agents with Git repositories",
+  "main": "dist/cli.js",
+  "bin": {
+    "csgs": "dist/cli.js",
+    "copilot-studio-git-sync": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "microsoft",
+    "copilot-studio",
+    "power-platform",
+    "git",
+    "version-control",
+    "cli",
+    "agents",
+    "bots"
+  ],
+  "author": "feelgood4everai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feelgood4everai/copilot-studio-git-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feelgood4everai/copilot-studio-git-sync/issues"
+  },
+  "homepage": "https://github.com/feelgood4everai/copilot-studio-git-sync#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^2.6.0",
+    "axios": "^1.6.5",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.2.0",
+    "simple-git": "^3.22.0",
+    "zod": "^3.22.4",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "keytar": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^8.2.10",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}
